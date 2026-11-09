@@ -1,0 +1,39 @@
+# ==============================================================
+# Donnees
+# ==============================================================
+# Donnees brutes non versionnees : l'archive EdStats contient des fichiers
+# au-dela de la limite GitHub de 100 Mio (EdStatsData.csv pese 326 Mo).
+# Procedure de recuperation : data/raw/README.md
+data/raw/*
+!data/raw/README.md
+
+# Donnees intermediaires regenerables par les notebooks.
+# Seules les tables de resultats legeres sont versionnees.
+data/processed/*
+!data/processed/EdStatsSeries_filtre.csv
+!data/processed/EdStastDataCountryIndicator.csv
+!data/processed/EdStastDataCountryIndicator_filtre.csv
+!data/processed/EdStastDataCountry_filtre_indicateurs_finaux.csv
+
+# ==============================================================
+# Environnement Python (gere par uv - uv.lock est versionne)
+# ==============================================================
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ==============================================================
+# Jupyter
+# ==============================================================
+.ipynb_checkpoints/
+
+# ==============================================================
+# Systeme et editeurs
+# ==============================================================
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
